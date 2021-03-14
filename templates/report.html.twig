@@ -1,0 +1,20 @@
+<h3>Number of customers:</h3>
+<p>{{ customers_count }}</p>
+<h3>Number of assigned loyalty cards:</h3>
+<p>{{ assigned_cards_count }}</p>
+<h3>Top 10 most spending customers:</h3>
+<table border = "1" style="text-align:center">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Money Spent</th>
+    </tr>
+    {% for cust in most_spending_customers %}
+        <tr>
+            <td>{{ cust.firstname }}</td>
+            <td>{{ cust.lastname }}</td>
+            <td>{{ cust.moneySpent }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
